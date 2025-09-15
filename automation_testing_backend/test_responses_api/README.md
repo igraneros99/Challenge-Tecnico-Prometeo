@@ -1,0 +1,2 @@
+## Helper ##
+En esta carpeta se encuentran los diferentes responses que se da en cada seccion de los testcases, se uso para verificar la respuesta de los endpoints, para ejecutar se hacer con python nombre_de_test_response.py, eso ejecuta el codigo y devuelve ordenado por cada testcase la respuesta del api.

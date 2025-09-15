@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8620","Login exitoso y navegación a Sandbox API Keys","","Mon Sep 15 19:22:15 GMT-03:00 2025","passed","Mon Sep 15 19:22:23 GMT-03:00 2025","Flujo de Login y validación de API Key","login_apy_key.spec.ts","",""

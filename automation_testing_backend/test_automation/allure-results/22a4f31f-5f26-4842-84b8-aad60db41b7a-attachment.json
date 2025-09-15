@@ -1,0 +1,15 @@
+{
+  "data": {
+    "valid": true,
+    "message": "Cuenta valida",
+    "account_number": "9990000100000000000000",
+    "bank_code": "999",
+    "country_code": "AR",
+    "branch_code": null,
+    "document_type": "CUIT",
+    "document_number": "30-71515454-1",
+    "beneficiary_name": "ROBERTO CARLOS",
+    "account_currency": "ARS",
+    "account_type": "CHECKING"
+  }
+}
