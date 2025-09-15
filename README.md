@@ -69,4 +69,3 @@ Este reporte incluirá:
 - Screenshots y trazas automáticas por cada test
 
 > **Nota:** Este proyecto ya incluye una ejecución previa de la suite. Si solo se desea visualizar los resultados sin volver a correr los tests, ejecutar directamente el comando de apertura de Allure.
-> **Nota** Se tiene que ejecutar estos comandos usando bash como shell, en caso de usar fish o shells mas modernas puede cambiar el comando
