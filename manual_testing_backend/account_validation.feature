@@ -432,7 +432,6 @@ Scenario: Invalid account sandobox but returns valid = true
     And the response field "errors.message" should be "Invalid parameter: branch_code"
   # Bug muy grave, deberia de retornar un 400 con el mensaje de invalid parameter account_number, pero no un error interno del servidor, todo apunta a que falta una validacion al formato de branch_code, al procesar un string como si fuera un numero se rompe el backend ( Conversion fallida o acceso invalido ?)
 
-
   @mx @unhappy @sandbox-local @api @en
   Scenario: Invalid MX request - bank code with special characters
     Given the account validation API is available
