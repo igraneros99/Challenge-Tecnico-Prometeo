@@ -1,3 +1,4 @@
+// loginpage.ts
 import { Page, Locator } from '@playwright/test';
 
 export class LoginPage {
@@ -17,13 +18,26 @@ export class LoginPage {
     await this.page.goto('https://dashboard.prometeoapi.com/login');
   }
 
-  async login(email: string, password: string) {
-    await this.emailInput.click();
-    await this.page.keyboard.type(email);
+  async fillEmail(email: string) {
+    await this.emailInput.fill(email);
+  }
 
-    await this.passwordInput.click();
-    await this.page.keyboard.type(password);
+  async fillPassword(password: string) {
+    // eliminar atributo readonly del campo
+    await this.page.evaluate(() => {
+      const input = document.querySelector<HTMLInputElement>('#password');
+      if (input) input.removeAttribute('readonly');
+    });
+    await this.passwordInput.fill(password);
+  }
 
+  async clickLogin() {
     await this.loginButton.click();
+  }
+
+  async login(email: string, password: string) {
+    await this.fillEmail(email);
+    await this.fillPassword(password);
+    await this.clickLogin();
   }
 }
