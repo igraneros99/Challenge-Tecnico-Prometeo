@@ -1,4 +1,3 @@
-// dashboardpage.ts
 import { Page, Locator, expect } from '@playwright/test';
 
 export class DashboardPage {

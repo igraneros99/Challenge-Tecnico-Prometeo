@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"5d35b844f186637b9944ab0c5ad0c7c4","name":"Autenticación y Navegación","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
+{"total":2,"items":[{"uid":"f126cec1b973de2256c33c1476d5822d","name":"Auth/Nav","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}},{"uid":"bebe6215cfb3d1a618010b2e9688d542","name":"Nav/Val","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}

@@ -4,45 +4,50 @@ import { LoginPage } from './pages/LoginPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { credentials } from './config/env';
 
-test.describe('Flujo de Login y validación de API Key', () => {
-  test('Login exitoso y navegación a Sandbox API Keys', async ({ page }) => {
-    allure.epic('Autenticación y Navegación');
-    allure.feature('Dashboard API Key Visibility');
-    allure.story('Login exitoso con credenciales válidas');
+test.describe('Login y validacion de API Key', () => {
+  let loginPage: LoginPage;
+  let dashboardPage: DashboardPage;
+
+  test.beforeEach(async ({ page }) => {
+    loginPage = new LoginPage(page);
+    dashboardPage = new DashboardPage(page);
+
+    await loginPage.goto();
+    await loginPage.login(credentials.email, credentials.password);
+  });
+
+  test('Successful login with valid credentials', async ({ page }) => {
+    allure.epic('Auth/Nav');
+    allure.feature('Login');
+    allure.story('Happy Path: Login');
     allure.owner('ignacio.graneros');
     allure.severity('critical');
     allure.label('testType', 'E2E');
 
-    const loginPage = new LoginPage(page);
-    const dashboardPage = new DashboardPage(page);
+    await allure.attachment('Screenshot: credenciales login', await page.screenshot(), 'image/png');
+  });
 
-    const ss = async (nombre: string) => {
-      await allure.attachment(nombre, await page.screenshot(), 'image/png');
-    };
-
-    await test.step('Navegar a la página de login', async () => {
-      await loginPage.goto();
-      await ss('Pantalla: Login');
-    });
-
-    await test.step('Login con credenciales válidas', async () => {
-      await loginPage.login(credentials.email, credentials.password);
-      await ss('Post Login');
-    });
+  test('API Key is displayed after login', async ({ page }) => {
+    allure.epic('Nav/Val');
+    allure.feature('Dashboard API Key');
+    allure.story('Happy path: API Key is displayed after the login');
+    allure.owner('ignacio.graneros');
+    allure.severity('critical');
+    allure.label('testType', 'E2E');
 
     await test.step('Ir a Sandbox API Keys', async () => {
       await dashboardPage.goToSandboxKeys();
-      await ss('Sandbox Keys abierto');
+      await allure.attachment('Screenshot: Texto de sandbox keys', await page.screenshot(), 'image/png');
     });
 
     await test.step('Verificar visibilidad de API Key', async () => {
       await dashboardPage.assertAPIKeyVisible();
-      await ss('API Key Visible');
+      await allure.attachment('Screenshot: asercion de que el API Key es visible', await page.screenshot(), 'image/png');
     });
 
     await test.step('Verificar valor correcto de API Key', async () => {
       await dashboardPage.assertAPIKeyValue(credentials.apiKey);
-      await ss('API Key Validada');
+      await allure.attachment('API Key Validada', await page.screenshot(), 'image/png');
     });
   });
 });

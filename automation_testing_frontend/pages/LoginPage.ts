@@ -1,4 +1,3 @@
-// loginpage.ts
 import { Page, Locator } from '@playwright/test';
 
 export class LoginPage {
@@ -23,7 +22,7 @@ export class LoginPage {
   }
 
   async fillPassword(password: string) {
-    // eliminar atributo readonly del campo
+    // si no se saca el readonly se tiene que usar fill, mala practica
     await this.page.evaluate(() => {
       const input = document.querySelector<HTMLInputElement>('#password');
       if (input) input.removeAttribute('readonly');

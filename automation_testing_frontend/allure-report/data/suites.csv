@@ -1,4 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","8763","Login exitoso y navegación a Sandbox API Keys","","Mon Sep 22 11:00:28 GMT-03:00 2025","passed","Mon Sep 22 11:00:37 GMT-03:00 2025","Flujo de Login y validación de API Key","login_apiKey.spec.ts","",""
-"","8236","Login exitoso y navegación a Sandbox API Keys","","Sun Sep 21 16:31:41 GMT-03:00 2025","passed","Sun Sep 21 16:31:49 GMT-03:00 2025","Flujo de Login y validación de API Key","login_api_key.spec.ts","",""
-"","8620","Login exitoso y navegación a Sandbox API Keys","","Mon Sep 15 19:22:15 GMT-03:00 2025","passed","Mon Sep 15 19:22:23 GMT-03:00 2025","Flujo de Login y validación de API Key","login_apy_key.spec.ts","",""
+"","5597","API Key is displayed after login","","Mon Sep 22 11:15:14 GMT-03:00 2025","passed","Mon Sep 22 11:15:20 GMT-03:00 2025","Login y validacion de API Key","login_apiKey.spec.ts","",""
+"","4000","Successful login with valid credentials","","Mon Sep 22 11:15:10 GMT-03:00 2025","passed","Mon Sep 22 11:15:14 GMT-03:00 2025","Login y validacion de API Key","login_apiKey.spec.ts","",""
