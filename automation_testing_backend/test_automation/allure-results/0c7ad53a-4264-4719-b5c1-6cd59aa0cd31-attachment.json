@@ -1,9 +1,0 @@
-{
-  "data": {
-    "valid": false
-  },
-  "errors": {
-    "code": 404,
-    "message": "Cuenta credito invalida"
-  }
-}

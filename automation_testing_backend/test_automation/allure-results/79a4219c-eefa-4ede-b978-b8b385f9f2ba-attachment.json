@@ -1,7 +1,0 @@
-{
-  "data": null,
-  "errors": {
-    "code": 400,
-    "message": "Invalid parameter: bank_code"
-  }
-}

@@ -25,6 +25,7 @@ test_cases = [
         {"data.valid": False, "errors.message": "Cuenta credito invalida"},
         id="Br invalid IBAN"
     ),
+        # IMPORTANTE ! Este test se ejecuta pero no se refleja en allure por bug conocido del reporter
     pytest.param(
         {"account_number": "ABC12345", "country_code": "BR", "document_number": "58.547.642/0001-95"},
         400,
@@ -74,7 +75,6 @@ test_cases = [
         {"data.valid": False, "errors.message": "Cuenta credito invalida"},
         id="BR invalid local account"
     ),
-        # IMPORTANTE ! Este test se ejecuta pero no se refleja en allure por bug conocido del reporter
     pytest.param(
         {"account_number": "ABCD1234", "branch_code": "00001", "bank_code": "999", "country_code": "BR", "document_number": "58.547.642/0001-95", "account_type": "CHECKING"},
         404,
