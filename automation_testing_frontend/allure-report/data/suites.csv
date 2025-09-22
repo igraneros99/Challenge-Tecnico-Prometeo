@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","5597","API Key is displayed after login","","Mon Sep 22 11:15:14 GMT-03:00 2025","passed","Mon Sep 22 11:15:20 GMT-03:00 2025","Login y validacion de API Key","login_apiKey.spec.ts","",""
-"","4000","Successful login with valid credentials","","Mon Sep 22 11:15:10 GMT-03:00 2025","passed","Mon Sep 22 11:15:14 GMT-03:00 2025","Login y validacion de API Key","login_apiKey.spec.ts","",""

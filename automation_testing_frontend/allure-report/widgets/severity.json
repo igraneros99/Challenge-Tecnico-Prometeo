@@ -1,1 +1,0 @@
-[{"uid":"d5c5f1461196921e","name":"Successful login with valid credentials","time":{"start":1758550510412,"stop":1758550514412,"duration":4000},"status":"passed","severity":"critical"},{"uid":"304e869a4700c90b","name":"API Key is displayed after login","time":{"start":1758550514618,"stop":1758550520215,"duration":5597},"status":"passed","severity":"critical"}]
