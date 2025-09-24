@@ -1,0 +1,40 @@
+# ⛔️ Ignorar todos los archivos env.* (Python, TypeScript, etc.)
+**/env.*
+*.env
+
+# ⛔️ Ignorar carpetas virtualenv, cache y compilados Python
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# ⛔️ Pytest cache
+.pytest_cache/
+
+# ⛔️ Allure results
+allure-results/
+**/allure-results/
+
+# ⛔️ VSCode / JetBrains / entornos
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# ⛔️ Archivos temporales o de backup
+*~
+*.bak
+*.tmp
+*.log
+*.orig
+
+# ⛔️ Archivos de sistema
+Thumbs.db
+ehthumbs.db
+desktop.ini

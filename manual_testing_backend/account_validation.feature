@@ -358,7 +358,7 @@ Scenario: Invalid account sandobox but returns valid = true
       | account_number | 99900abc00000001  |
       | country_code   | MX                |
     Then the response status should be 400
-    And the response field "errors.code" should be 400
+    And the response field "errors.code" should be 4003
     And the response field "errors.message" should be "Missing parameter: bank_code"
   # El parametro de bankcode no esta siendo resuelto por poner numeros en el account ?
 

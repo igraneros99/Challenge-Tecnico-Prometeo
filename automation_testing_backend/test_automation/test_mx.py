@@ -2,12 +2,15 @@ import pytest
 import requests
 import allure
 import json
+from env import credentials
 
-URL = "https://account-validation.sandbox.prometeoapi.com/validate-account/"
+URL = credentials["BASE_URL"]
+API_KEY = credentials["API_KEY"]
+
 HEADERS = {
     "accept": "application/json",
     "content-type": "application/x-www-form-urlencoded",
-    "X-API-Key": "Ysh7cIDDglVga6AFrKWVXyyXeihmBILDR1ZDCEVCtnaKGE8jghfcoSMAN5gAZMdB"
+    "X-API-Key": API_KEY,
 }
 
 test_cases = [
